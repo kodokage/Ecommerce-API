@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "fa4c8654-d474-4637-be57-b0fb58cf5ce9",
+		"name": "Bush Market",
+		"description": "This provides api access point to the bush market project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "tochi",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "odeme",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "tochukwuodeme@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjlkZGFhNmFhMjM2MTdiYWU2YzM2YjZiY2NkYTMwMDg2MzY1NTUwNTkxODkzOTYxMWE3NDM3NjJkZTVhMmQ3MjQ5YThkYjYwYWUwYTVhZmEiLCJpYXQiOjE1OTUxNDA2MDEsIm5iZiI6MTU5NTE0MDYwMSwiZXhwIjoxNTk1NTcyNTk4LCJzdWIiOiIzIiwic2NvcGVzIjpbIioiXX0.or2EmP8RBFvCYctD802evrpvnLGHkeeXf7p5ERIvi_cL0nuZFHV37CNchQgewgFYo8HTFsg69yA98-5HqhQPxpvCmc397E8I7ynb_lKWk99lvXJpFXZbbdUaTG1iMmZ_mFE1hvFub3GUhnQ4e5P_STjKo2O_uWJ78Ocililp9gPTl47Zmrx-roEHZtXqmfQq9RA1lODx8V3cyPgY3GlsVtLTYLSvRVMU4LS79YM-8xtbELOp09_vnY38foH5aMZzBqSNZyKcHA7ak3DZtwRV0YTZA0dETHBL5tpPn9HrqWD25Gez8rAcLlHXi1MtMBVtS9tXfporQ-pESfdhls9E5xWJaDxwgeosYjSiD8_DeIOLpH9IasGy9oeRoIaTolKi8WHgUfhBLosBcQHxQKUeStjOQDORoVce_Wa_GLAEEpW4fIvO8Ni_0BmvTZnBCVusN7Xn5fUTy53i8rML-QVa05OCX2CFAgoq-1nlTFDpBp-pHiYMfKRCSZNKLxlMTQDJtHYLrTQ9E1bay07KyTXIjW0emAubiOkXo9hbwt721fhEocwohC8MIXXklaw5q9uHal1KhFPMBotLLQPpLoSAjpT8p2KpT7vGVvUJ5vff8gVp0FjkUV91EjiXS7dmQBYTYuBhUeS4APCckcXwEi0ap2V4L_MXkcdttl3NTy5M2NQ",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "tochukwuodeme@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Verify",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "enter_token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/v1/email/verify",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"email",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User Dashboard",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiODYyOWQ5OTVmNjhmMWIyNWFhOTZjMzJhNDBkOWViYjQyNmQ0MDA4M2IzOTY5Y2I2MzFmMGE2MzRmZjY3NDMzYzNiODY2ZWY5ZTA0MDA0MGEiLCJpYXQiOjE1OTUxNDM5OTEsIm5iZiI6MTU5NTE0Mzk5MSwiZXhwIjoxNTk1NTc1OTkxLCJzdWIiOiIzIiwic2NvcGVzIjpbIioiXX0.tT90Q92N6QBwLVksuIwoDP10YHer6OaEmXbONrG66omaanQVKHQFYI9vLdywDDU-XXUHivL9KLRlECofziZj5RQE9AAOuN3lGtV-2YQ2YfjuBDZxLCVvJOyCe6sz7x9vXfY8tvmS7y2R2qYWQMzL7xFs_IS8tHKoEFYOjs7evoCFFi8_Ws2o4lmlFsPfQwdtJsfBv7Rc0y9WFxA8V_jv9hkVxt9DcR4NpZdsTerZiqbX4Gq8y-7raRO0G6GWIlqJ9a7TRJqarhirBjN27e4HYNCS5ybD8XINlmtlQT3efw6QqGk39N1cGJ8yKvauTC3Vim25Fv0zD3Gxdw2DkeaTu7nMd5NuZG_bqNbzvRynsB_YQhewSrwaRGCAb9YGVXzryEVlvYJpGgTQ7X5xCka1WvBeMWzjBP907W9wYUuKE8RUzjLQ7IzE6m3dX41UVtBlh2bi-CT-3WVxOio1gxet_2CDz158aaVKoxTBMzqMZofPWjUeb_JLo8IPYtneRKIWvNBK_8MtY3z0-sWQwzgkDGYB_gjxdxrbTAAz6YIb-Mc4xoQ3JWA4udXDyYLivFb-AtmC6wiPk0tmSnIRyo9ukHsmUUoKr8qD7Bv5AO1aZB9yfkC_uIkpRvumadQxzu3FxQZrXmltNl-_fZoJjkEZewewa8Vz8R5Fr5GWJ51zhh8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
